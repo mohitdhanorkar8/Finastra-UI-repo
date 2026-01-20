@@ -1,0 +1,124 @@
+.navbar {
+  height: 64px;
+  background-color: #1f2937;
+  /* dark theme */
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Logo */
+.logo {
+  height: 10rem;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Nav list */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 8px;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+/* Active route */
+.nav-links li a.active {
+  color: #ffffff;
+  border-bottom: 2px solid #00bcd4;
+  /* Finastra-like accent */
+}
+
+/* Hover effect */
+.nav-links li a:hover {
+  color: #ffffff;
+}
+
+.balance-card {
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #0f0524 0%, #3b0a6b 50%, #7b1fa2 100%);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35); */
+  color: #ffffff;
+}
+
+
+/* Content */
+.balance-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Greeting */
+.greeting {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Subtitle */
+.subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+/* Amount row */
+.amount-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* Currency pill */
+.currency-pill {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Amount */
+.amount {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* grid-list */
+
+mat-grid-tile {
+  background: rgb(204, 206, 207);
+
+}
+
+
+
+

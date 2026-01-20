@@ -1,0 +1,64 @@
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="https://images.seeklogo.com/logo-png/61/3/finastra-logo-png_seeklogo-617954.png" alt="Finastra Logo"
+      class="logo" />
+      
+    <ul class="nav-links">
+      <li>
+        <a routerLink="/dashboard" routerLinkActive="active">
+           Dashboard
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/trade">
+          Trade
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/cash">
+          Cash
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/landing">
+          Landing
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/supply-chain-finance">
+          Supply Chain Finance
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="balance-card">
+  <div class="balance-content">
+    <h4 class="greeting">Hi Mohit,</h4>
+    <p class="subtitle">Your Consolidated Account Balance</p>
+
+    <div class="amount-row">
+      <span class="currency-pill">USD</span>
+      <span class="amount">39,234,234.00</span>
+    </div>
+  </div>
+</div>
+
+<!-- <mat-grid-list cols="3" rowHeight="2:2">
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+  <mat-grid-tile>5</mat-grid-tile>
+  <mat-grid-tile>6</mat-grid-tile>
+</mat-grid-list> -->
+
+
+
+
+<router-outlet></router-outlet>
