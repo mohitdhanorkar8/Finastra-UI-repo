@@ -2,11 +2,11 @@
   <div class="navbar-left">
     <img src="https://images.seeklogo.com/logo-png/61/3/finastra-logo-png_seeklogo-617954.png" alt="Finastra Logo"
       class="logo" />
-      
+
     <ul class="nav-links">
       <li>
         <a routerLink="/dashboard" routerLinkActive="active">
-           Dashboard
+          Dashboard
         </a>
       </li>
 
@@ -49,16 +49,33 @@
   </div>
 </div>
 
-<!-- <mat-grid-list cols="3" rowHeight="2:2">
-  <mat-grid-tile>1</mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-  <mat-grid-tile>3</mat-grid-tile>
-  <mat-grid-tile>4</mat-grid-tile>
-  <mat-grid-tile>5</mat-grid-tile>
-  <mat-grid-tile>6</mat-grid-tile>
-</mat-grid-list> -->
+<!-- dashboard cards -->
+<mat-grid-list cols="3" rowHeight="400px">
 
+  <mat-grid-tile>
+    <app-quick-access></app-quick-access>
+  </mat-grid-tile>
 
+  <mat-grid-tile>
+    <app-limits></app-limits>
+  </mat-grid-tile>
 
+  <mat-grid-tile>
+    <app-accounts></app-accounts>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <app-account-balance></app-account-balance>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <app-ongoing-tasks></app-ongoing-tasks>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <app-calender></app-calender>
+  </mat-grid-tile>
+
+</mat-grid-list>
 
 <router-outlet></router-outlet>

@@ -1,0 +1,121 @@
+.dashboard-card {
+  width: 355px;
+  height: 346px;
+  justify-self: center !important;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  --underline-color: #0ea5a2;
+  --underline-width: 300px;
+  --underline-height: 2px;
+}
+
+.card-title::after {
+  content: "";
+  display: block;
+  width: var(--underline-width);
+  height: var(--underline-height);
+  background: var(--underline-color);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.menu {
+  color: #6b7280;
+  cursor: pointer;
+  font-size: larger;
+}
+
+/* Limit row */
+.limit-row {
+  margin-bottom: 14px;
+}
+
+.limit-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+/* Progress bars stacked */
+.progress-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Available (background bar) */
+.available-bar mat-progress-bar {
+  height: 6px;
+  border-radius: 4px;
+}
+
+.available-bar ::ng-deep .mat-progress-bar-fill::after {
+  background-color: #8bd3dd;
+}
+
+/* Utilized (foreground bar) */
+.utilized-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.utilized-bar mat-progress-bar {
+  height: 6px;
+  border-radius: 4px;
+}
+
+.utilized-bar ::ng-deep .mat-progress-bar-fill::after {
+  background-color: #5b5bd6;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  gap: 16px;
+  font-size: 11px;
+  color: #374151;
+  margin-top: auto;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.dot.available {
+  background-color: #8bd3dd;
+}
+
+.dot.utilized {
+  background-color: #5b5bd6;
+}

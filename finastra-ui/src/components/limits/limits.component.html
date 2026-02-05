@@ -1,1 +1,64 @@
-<p>limits works!</p>
+<mat-card class="dashboard-card">
+
+    <!-- Header -->
+    <div class="card-header">
+        <span class="card-title">Limits</span>
+        <span class="menu">⋮</span>
+    </div>
+
+    <!-- Limit Row -->
+    <div class="limit-row">
+        <div class="limit-label">Overdraft (AED)</div>
+        <div class="progress-wrapper">
+            <div class="available-bar">
+                <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+            </div>
+            <div class="utilized-bar">
+                <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+            </div>
+        </div>
+    </div>
+
+    <div class="limit-row">
+        <div class="limit-label">Overdraft (EUR)</div>
+        <div class="progress-wrapper">
+            <div class="available-bar">
+                <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+            </div>
+            <div class="utilized-bar">
+                <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
+            </div>
+        </div>
+    </div>
+
+    <div class="limit-row">
+        <div class="limit-label">Credit Line (AED)</div>
+        <div class="progress-wrapper">
+            <div class="available-bar">
+                <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+            </div>
+            <div class="utilized-bar">
+                <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+            </div>
+        </div>
+    </div>
+
+    <div class="limit-row">
+        <div class="limit-label">Credit Line (USD)</div>
+        <div class="progress-wrapper">
+            <div class="available-bar">
+                <mat-progress-bar mode="determinate" value="65"></mat-progress-bar>
+            </div>
+            <div class="utilized-bar">
+                <mat-progress-bar mode="determinate" value="35"></mat-progress-bar>
+            </div>
+        </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="legend">
+        <span><i class="dot available"></i> Available</span>
+        <span><i class="dot utilized"></i> Utilized</span>
+    </div>
+
+</mat-card>

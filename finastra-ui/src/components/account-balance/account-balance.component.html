@@ -1,1 +1,19 @@
-<p>account-balance works!</p>
+<div class="dashboard-card">
+  <div class="card-header">
+    <span class="card-title">Account Balances</span>
+  </div>
+  <hr class="divider" />
+  @for (item of balances(); track item.accNo + item.type) {
+  <div class="balance-item">
+    <div class="balance-left">
+      <div class="balance-type">{{ item.type }}</div>
+      <div class="balance-acc">Acc No: {{ item.accNo }}</div>
+    </div>
+    <div class="balance-amount">
+      {{ item.currency }} {{ item.amount }}
+    </div>
+  </div>
+  }
+  <div class="view-all">View All</div>
+
+</div>

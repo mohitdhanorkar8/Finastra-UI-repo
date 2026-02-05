@@ -114,11 +114,14 @@
 
 /* grid-list */
 
-mat-grid-tile {
-  background: rgb(204, 206, 207);
-
+mat-grid-list{
+  padding: 20px;
+  background: transparent;
 }
 
+mat-grid-tile {
+  background: rgb(204, 206, 207);
+}
 
 
 
