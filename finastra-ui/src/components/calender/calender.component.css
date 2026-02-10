@@ -1,44 +1,78 @@
 .dashboard-card {
-  width: 355px;
-  height: 346px;
-  justify-self: center !important;
-  padding: 40px;
+  /* width: 100%;
+  max-width: 420px; */
+  height: 400px;
+  width: 300px;
+  padding: 12px;
+  border-radius: 6px;
   box-sizing: border-box;
-  border-radius: 8px;
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
 }
 
 /* Header */
 .card-header {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 2px;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 8px;
 }
 
 .card-title {
-  font-size: 22px;
+  font-size: 14px;
   font-weight: 600;
-  color: #111827;
-  text-align: center;
-  width: 100%;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  --underline-color: #0ea5a2;
-  --underline-width: 300px;
-  --underline-height: 2px;
 }
 
-.card-title::after {
-  content: "";
-  display: block;
-  width: var(--underline-width);
-  height: var(--underline-height);
-  background: var(--underline-color);
-  margin: 8px auto 0;
-  border-radius: 2px;
+/* Calendar styling */
+mat-calendar {
+  width: 100%;
+}
+
+/* Reduce calendar cell size (compact look) */
+::ng-deep .mat-calendar-body-cell {
+  height: 32px;
+}
+
+::ng-deep .mat-calendar-body-cell-content {
+  font-size: 12px;
+}
+
+/* Header (month/year) */
+::ng-deep .mat-calendar-header {
+  padding: 4px 0;
+}
+
+::ng-deep .mat-calendar-period-button {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Selected date */
+::ng-deep .mat-calendar-body-selected {
+  background-color: #6d28d9 !important;
+  color: #ffffff;
+}
+
+/* Today */
+::ng-deep .mat-calendar-body-today:not(.mat-calendar-body-selected) {
+  border-color: #6d28d9;
+}
+
+/* Weekday labels */
+::ng-deep .mat-calendar-table-header {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* Selected date text */
+.selected-date {
+  font-size: 12px;
+  color: #374151;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .dashboard-card {
+    max-width: 100%;
+  }
 }

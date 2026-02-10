@@ -1,49 +1,14 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ACCOUNT_BALANCES_MOCK, AccountBalance } from './account-balance.mock';
 
 @Component({
   selector: 'app-account-balance',
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './account-balance.component.html',
-  styleUrl: './account-balance.component.css'
+  styleUrls: ['./account-balance.component.css']
 })
 export class AccountBalanceComponent {
-
-  balances = signal([
-    {
-      type: 'Expense',
-      accNo: '3212232322',
-      currency: 'USD',
-      amount: '3,000,000'
-    },
-    {
-      type: 'Current',
-      accNo: '3212232322',
-      currency: 'EUR',
-      amount: '2,000,000'
-    },
-    {
-      type: 'Commission',
-      accNo: '3212232322',
-      currency: 'INR',
-      amount: '1,000,000'
-    },
-    {
-      type: 'Expense',
-      accNo: '3212232322',
-      currency: 'USD',
-      amount: '3,000,000'
-    },
-    {
-      type: 'Current',
-      accNo: '3212232322',
-      currency: 'EUR',
-      amount: '2,000,000'
-    },
-    {
-      type: 'Commission',
-      accNo: '3212232322',
-      currency: 'INR',
-      amount: '1,000,000'
-    }
-  ]);
+  balances: AccountBalance[] = ACCOUNT_BALANCES_MOCK;
 }

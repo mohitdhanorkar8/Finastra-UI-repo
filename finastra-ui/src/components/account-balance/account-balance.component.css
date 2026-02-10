@@ -1,48 +1,36 @@
-.dashboard-card {
-  padding: 16px;
+/* Card wrapper */
+.account-card {
+  width: 400px;
+  height: 396px;
+  justify-self: center !important;
+  padding: 20px;
+  box-sizing: border-box;
   border-radius: 8px;
   background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 420px;
-  justify-self: center !important;
-
-  /* 🔑 CRITICAL: ensure nothing is clipped */
-  overflow: visible;
-  min-width: 0;
 }
 
-/* ================= Header ================= */
-
-.card-header {
+/* Header */
+.header {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 4px;
-  position: relative;
-  width: 100%;
-  min-width: 0;
+  justify-content: space-between;
+  margin-bottom: 2px;
 }
 
 .card-title {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 600;
   color: #111827;
   text-align: center;
   width: 100%;
-  margin: 0;
-
-  /* 🔑 allow wrapping instead of clipping */
-  white-space: normal;
-  overflow: visible;
-  word-break: break-word;
-
+  /* margin: 0; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   --underline-color: #0ea5a2;
-  --underline-width: 220px;
+  --underline-width: 300px;
   --underline-height: 2px;
 }
 
@@ -56,128 +44,75 @@
   border-radius: 2px;
 }
 
-/* ================= Divider ================= */
-
-.divider {
-  border: none;
-  border-top: 1px solid #e5e7eb;
-  margin: 6px 0 12px;
-  width: 100%;
-}
-
-/* ================= Balance Rows ================= */
-
-.balance-item {
+/* List wrapper */
+.list {
   display: flex;
-  align-items: flex-start; /* 🔑 allows multi-line content */
+  flex-direction: column;
+}
+
+/* Each row */
+.row {
+  display: flex;
   justify-content: space-between;
-  gap: 12px;
-  padding: 12px 0;
-  transition: background-color 160ms ease;
-  box-sizing: border-box;
-  width: 100%;
-  min-height: auto;
-
-  /* 🔑 allow wrapping when needed */
-  flex-wrap: wrap;
+  align-items: center;           
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-.balance-item + .balance-item {
-  border-top: 1px solid rgba(17,24,39,0.06);
+.row:last-child {
+  border-bottom: none;
 }
 
-.balance-item:hover,
-.balance-item:focus-within {
-  background: rgba(15,23,42,0.02);
-}
-
-/* ================= Left Section ================= */
-
-.balance-left {
+/* Left section */
+.left {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  flex: 1 1 65%;
-  min-width: 0;
-  box-sizing: border-box;
 }
 
-.balance-type {
+.title {
   font-size: 14px;
   font-weight: 600;
-  color: #0f172a;
+  line-height: 1.2;
   margin: 0;
-
-  /* 🔑 allow full text visibility */
-  white-space: normal;
-  word-break: break-word;
 }
 
-.balance-acc {
+.sub {
   font-size: 12px;
   color: #6b7280;
+  line-height: 1.2;
   margin: 0;
-
-  white-space: normal;
-  word-break: break-word;
 }
 
-/* ================= Amount ================= */
-
-.balance-amount {
-  font-size: 18px;
+/* Right section */
+.right {
+  font-size: 15px;
   font-weight: 700;
-  color: #0f172a;
-
-  /* 🔑 flexible amount area */
-  flex: 1 1 100%;
-  min-width: 0;
-
-  text-align: right;
-  white-space: normal;
-  word-break: break-word;
+  white-space: nowrap;         
+  line-height: 1;
 }
 
-/* ================= View All ================= */
-
-.view-all {
-  font-size: 13px;
-  color: #0ea5a2;
-  text-align: center;
-  padding: 10px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  align-self: center;
-  width: 100%;
-  max-width: 220px;
-  transition: background-color 120ms ease, color 120ms ease;
-  box-sizing: border-box;
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
 }
 
-.view-all:hover {
-  background: rgba(14,165,162,0.06);
+.footer a {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6d28d9;
+  text-decoration: none;
 }
 
-/* ================= Responsive ================= */
-
-@media (max-width: 520px) {
-  .balance-item {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-    padding: 10px 0;
+/* Mobile */
+@media (max-width: 480px) {
+  .account-card {
+    max-width: 100%;
   }
 
-  .balance-left {
-    flex: 1 1 100%;
-  }
-
-  .balance-amount {
-    text-align: left;
-    margin-top: 6px;
-  }
-
-  .card-title {
-    --underline-width: 160px;
+  .right {
+    font-size: 14px;
   }
 }

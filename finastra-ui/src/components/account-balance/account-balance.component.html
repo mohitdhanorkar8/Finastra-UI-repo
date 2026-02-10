@@ -1,19 +1,22 @@
-<div class="dashboard-card">
-  <div class="card-header">
+<div class="account-card">
+  <div class="header">
     <span class="card-title">Account Balances</span>
   </div>
-  <hr class="divider" />
-  @for (item of balances(); track item.accNo + item.type) {
-  <div class="balance-item">
-    <div class="balance-left">
-      <div class="balance-type">{{ item.type }}</div>
-      <div class="balance-acc">Acc No: {{ item.accNo }}</div>
-    </div>
-    <div class="balance-amount">
-      {{ item.currency }} {{ item.amount }}
+
+  <div class="list">
+    <div class="row" *ngFor="let item of balances">
+      <div class="left">
+        <div class="title">{{ item.type }}</div>
+        <div class="sub">Acc No: {{ item.accNo }}</div>
+      </div>
+
+      <div class="right">
+        {{ item.currency }} {{ item.amount | number:'1.0-0' }}
+      </div>
     </div>
   </div>
-  }
-  <div class="view-all">View All</div>
 
+  <div class="footer">
+    <a href="#">View All</a>
+  </div>
 </div>
