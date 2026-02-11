@@ -2,6 +2,8 @@
   <div class="card-header">
     <span class="card-title">Calender</span>
   </div>
-  <mat-calendar [(selected)]="selected"></mat-calendar>
+  <div class="calendar-wrapper">
+    <mat-calendar [(selected)]="selected"></mat-calendar>
+  </div>
   <p>Selected date: {{selected()}}</p>
 </mat-card>
