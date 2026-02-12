@@ -1,30 +1,69 @@
 .dashboard-card {
-  /* width: 100%;
-  max-width: 420px; */
-  height: 400px;
-  width: 300px;
-  padding: 12px;
-  border-radius: 6px;
+  width: 400px;
+  height: 396px;
+  justify-self: center !important;
+  padding: 20px;
   box-sizing: border-box;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
-.card-header {
+ .card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111827;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    --underline-color: #0ea5a2;
+    --underline-width: 300px; 
+    --underline-height: 2px;
+  }
+
+  .card-title::after {
+    content: "";
+    display: block;
+    width: var(--underline-width);
+    height: var(--underline-height);
+    background: var(--underline-color);
+    margin: 8px auto 0; 
+    border-radius: 2px;
+  }
+
+.calendar-wrapper {
+  flex: 1;                 
   display: flex;
-  align-items: center;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #e5e7eb;
-  margin-bottom: 8px;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
-.card-title {
-  font-size: 14px;
-  font-weight: 600;
-}
+/* .calendar-wrapper mat-calendar {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); 
+  border: 1px solid #e5e7eb;               
+} */
 
 /* Calendar styling */
 mat-calendar {
-  width: 100%;
+  width: 65%;
 }
 
 /* Reduce calendar cell size (compact look) */
@@ -64,11 +103,13 @@ mat-calendar {
 }
 
 /* Selected date text */
-.selected-date {
-  font-size: 12px;
+p {
+  font-size: 15px;
   color: #374151;
-  margin-top: 8px;
+  margin-bottom: 0px;
 }
+
+
 
 /* Responsive */
 @media (max-width: 480px) {

@@ -8,6 +8,12 @@ import { AccountsComponent } from '../components/accounts/accounts.component';
 import { AccountBalanceComponent } from '../components/account-balance/account-balance.component';
 import { OngoingTasksComponent } from '../components/ongoing-tasks/ongoing-tasks.component';
 import { CalenderComponent } from '../components/calender/calender.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDividerModule } from '@angular/material/divider';
+
+
 
 @Component({
   selector: 'app-root',
@@ -21,7 +27,12 @@ import { CalenderComponent } from '../components/calender/calender.component';
     AccountsComponent,
     AccountBalanceComponent, 
     OngoingTasksComponent,
-    CalenderComponent
+    CalenderComponent,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatDividerModule
+    
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
