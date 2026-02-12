@@ -3,6 +3,10 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+     "paths": {
+      "@models": ["src/app/core/models/index.ts"],
+      "@constants": ["src/app/core/constants/index.ts"]
+    },
     "outDir": "./out-tsc/app",
     "types": [
       "node"
