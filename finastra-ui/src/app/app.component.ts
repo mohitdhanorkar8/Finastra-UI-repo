@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { CommonModule } from '@angular/common';
@@ -25,18 +25,46 @@ import { MatDividerModule } from '@angular/material/divider';
     QuickAccessComponent,
     LimitsComponent,
     AccountsComponent,
-    AccountBalanceComponent, 
+    AccountBalanceComponent,
     OngoingTasksComponent,
     CalenderComponent,
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
     MatDividerModule
-    
+
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'finastra-ui';
+
+showChat = false;
+showNotifications = false;
+
+closeAllPopups() {
+  this.showChat = false;
+  this.showNotifications = false;
+}
+
+onChatClick(event: MouseEvent) {
+  event.stopPropagation();
+  const wasOpen = this.showChat;
+  this.closeAllPopups();
+  this.showChat = !wasOpen;
+}
+
+onNotificationClick(event: MouseEvent) {
+  event.stopPropagation();
+  const wasOpen = this.showNotifications;
+  this.closeAllPopups();
+  this.showNotifications = !wasOpen;
+}
+
+@HostListener('document:click')
+onDocumentClick() {
+  this.closeAllPopups();
+}
+
 }

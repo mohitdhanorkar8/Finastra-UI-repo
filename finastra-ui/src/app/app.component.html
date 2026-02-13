@@ -1,61 +1,91 @@
 <nav class="navbar">
+  <!-- LEFT SECTION -->
   <div class="navbar-left">
-    <img src="https://images.seeklogo.com/logo-png/61/3/finastra-logo-png_seeklogo-617954.png" alt="Finastra Logo"
-      class="logo" />
+    <img
+      src="https://images.seeklogo.com/logo-png/61/3/finastra-logo-png_seeklogo-617954.png"
+      alt="Finastra Logo"
+      class="logo"
+    />
 
     <ul class="nav-links">
       <li>
-        <a routerLink="/dashboard" routerLinkActive="active">
-          Dashboard
-        </a>
+        <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
       </li>
-
       <li>
-        <a routerLink="/trade">
-          Trade
-        </a>
+        <a routerLink="/trade">Trade</a>
       </li>
-
       <li>
-        <a routerLink="/cash">
-          Cash
-        </a>
+        <a routerLink="/cash">Cash</a>
       </li>
-
       <li>
-        <a routerLink="/landing">
-          Landing
-        </a>
+        <a routerLink="/landing">Landing</a>
       </li>
-
       <li>
-        <a routerLink="/supply-chain-finance">
-          Supply Chain Finance
-        </a>
+        <a routerLink="/supply-chain-finance">Supply Chain Finance</a>
       </li>
     </ul>
   </div>
-  
-  <!-- Right Section -->
 
-    <div class="navbar-right">
-    <button mat-icon-button>
+  <!-- RIGHT SECTION -->
+  <div class="navbar-right">
+
+    <!-- Search -->
+    <button mat-icon-button (click)="closeAllPopups()">
       <mat-icon>search</mat-icon>
     </button>
 
-    <button mat-icon-button>
+    <!-- Chat -->
+    <button mat-icon-button (click)="onChatClick($event)">
       <mat-icon>chat_bubble_outline</mat-icon>
     </button>
 
-    <button mat-icon-button>
+    <!-- Notifications -->
+    <button mat-icon-button (click)="onNotificationClick($event)">
       <mat-icon>notifications_none</mat-icon>
     </button>
 
-    <!-- Profile -->
+    <!-- CHAT POPUP -->
+    <div
+      class="popup"
+      *ngIf="showChat"
+      (click)="$event.stopPropagation()"
+    >
+      <div class="popup-header">
+        <span>Chat</span>
+        <button mat-icon-button (click)="closeAllPopups()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+
+      <div class="popup-content">
+        <p>No Chat Messages</p>
+      </div>
+    </div>
+
+    <!-- NOTIFICATION POPUP -->
+    <div
+      class="popup"
+      *ngIf="showNotifications"
+      (click)="$event.stopPropagation()"
+    >
+      <div class="popup-header">
+        <span>Notifications</span>
+        <button mat-icon-button (click)="closeAllPopups()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+
+      <div class="popup-content">
+        <p>No Notifications</p>
+      </div>
+    </div>
+
+    <!-- PROFILE MENU -->
     <button
       mat-icon-button
-      [matMenuTriggerFor]="profileMenu"
       class="profile-btn"
+      [matMenuTriggerFor]="profileMenu"
+      (click)="closeAllPopups()"
     >
       <img
         src="https://i.pravatar.cc/32"
@@ -86,6 +116,7 @@
   </div>
 </nav>
 
+<!-- BALANCE CARD -->
 <div class="balance-card">
   <div class="balance-content">
     <h4 class="greeting">Hi Mohit,</h4>
@@ -98,9 +129,8 @@
   </div>
 </div>
 
-<!-- dashboard cards -->
+<!-- DASHBOARD GRID -->
 <mat-grid-list cols="3" rowHeight="400px">
-
   <mat-grid-tile>
     <app-quick-access></app-quick-access>
   </mat-grid-tile>
@@ -124,7 +154,6 @@
   <mat-grid-tile>
     <app-calender></app-calender>
   </mat-grid-tile>
-
 </mat-grid-list>
 
 <router-outlet></router-outlet>

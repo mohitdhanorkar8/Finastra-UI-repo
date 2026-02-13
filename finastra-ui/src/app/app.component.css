@@ -203,6 +203,52 @@ mat-grid-tile {
 }
 
 
+/* Popup container */
+.popup {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  width: 260px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+/* Header */
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 600;
+}
+
+/* Content */
+.popup-content {
+  padding: 12px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.popup-content p {
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.popup-content p:hover {
+  color: #6366f1;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
 /* ==============================
    📱 Mobile
 ================================ */
