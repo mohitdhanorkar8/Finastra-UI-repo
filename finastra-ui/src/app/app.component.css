@@ -242,6 +242,41 @@ mat-grid-tile {
   color: #6366f1;
 }
 
+   /* Search Container */
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Search Box */
+.search-box {
+  position: absolute;
+  right: 40px;
+  background: #374151;
+  padding: 6px 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  animation: fadeIn 0.2s ease;
+}
+
+/* Input */
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  width: 180px;
+  font-size: 13px;
+}
+
+/* Placeholder */
+.search-box input::placeholder {
+  color: #9ca3af;
+}
+
+
 /* Animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-6px); }

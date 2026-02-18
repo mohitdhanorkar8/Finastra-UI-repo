@@ -30,9 +30,35 @@
   <div class="navbar-right">
 
     <!-- Search -->
-    <button mat-icon-button (click)="closeAllPopups()">
+    <!-- <button mat-icon-button (click)="closeAllPopups()">
       <mat-icon>search</mat-icon>
-    </button>
+    </button> -->
+
+    <!-- SEARCH -->
+<div class="search-container" [class.active]="showSearch">
+  
+  <!-- Search Icon -->
+  <button mat-icon-button (click)="toggleSearch($event)">
+    <mat-icon>search</mat-icon>
+  </button>
+
+  <!-- Search Input -->
+  <div
+    class="search-box"
+    *ngIf="showSearch"
+    (click)="$event.stopPropagation()"
+  >
+    <input
+      type="text"
+      placeholder="Search..."
+      [(ngModel)]="searchText"
+      (keydown.escape)="closeSearch()"
+      autofocus
+    />
+  </div>
+
+</div>
+
 
     <!-- Chat -->
     <button mat-icon-button (click)="onChatClick($event)">
@@ -117,7 +143,7 @@
 </nav>
 
 <!-- BALANCE CARD -->
-<div class="balance-card">
+<!-- <div class="balance-card">
   <div class="balance-content">
     <h4 class="greeting">Hi Mohit,</h4>
     <p class="subtitle">Your Consolidated Account Balance</p>
@@ -127,10 +153,10 @@
       <span class="amount">39,234,234.00</span>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- DASHBOARD GRID -->
-<mat-grid-list cols="3" rowHeight="400px">
+<!-- <mat-grid-list cols="3" rowHeight="400px">
   <mat-grid-tile>
     <app-quick-access></app-quick-access>
   </mat-grid-tile>
@@ -154,6 +180,6 @@
   <mat-grid-tile>
     <app-calender></app-calender>
   </mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list> -->
 
 <router-outlet></router-outlet>

@@ -1,0 +1,370 @@
+.navbar {
+    height: 40px;
+    background-color: #1f2937;
+    /* dark theme */
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  /* Logo */
+  .logo {
+    height: 10rem;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  
+  /* Nav list */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 8px;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+  }
+  
+  /* Active route */
+  .nav-links li a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #00bcd4;
+    /* Finastra-like accent */
+  }
+  
+  /* Hover effect */
+  .nav-links li a:hover {
+    color: #ffffff;
+  }
+  
+  .balance-card {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #0f0524 0%, #3b0a6b 50%, #7b1fa2 100%);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35); */
+    color: #ffffff;
+  }
+  
+  
+  /* Content */
+  .balance-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  /* Greeting */
+  .greeting {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /* Subtitle */
+  .subtitle {
+    margin: 0;
+    font-size: 12px;
+    color: #cbd5e1;
+  }
+  
+  /* Amount row */
+  .amount-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  
+  /* Currency pill */
+  .currency-pill {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 4px 8px;
+    font-size: 11px;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Amount */
+  .amount {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  /* grid-list */
+  
+  mat-grid-list{
+    padding: 20px;
+    background: transparent;
+  }
+  
+  mat-grid-tile {
+    background: rgb(204, 206, 207);
+  }
+  
+  
+   /* Navbar Right Section */
+  
+  .navbar-right {
+    margin-left: auto;              
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Icon buttons */
+  .navbar-right button[mat-icon-button] {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+  }
+  
+  /* Icons */
+  .navbar-right mat-icon {
+    font-size: 20px;
+    color: #cbd5e1;                 
+    transition: color 0.2s ease;
+  }
+  
+  /* Hover */
+  .navbar-right button[mat-icon-button]:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .navbar-right button[mat-icon-button]:hover mat-icon {
+    color: #ffffff;
+  }
+  
+  /* Profile-Button */
+  
+  .profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-left: 6px;
+  }
+  
+  /* Avatar */
+  .avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Dropdown icon */
+  .dropdown-icon {
+    font-size: 16px;
+    color: #cbd5e1;
+  }
+  
+  .mat-menu-panel {
+    background: #1f2937;
+  }
+  
+  .mat-menu-item {
+    color: #e5e7eb;
+  }
+  
+  .mat-menu-item mat-icon {
+    color: #9ca3af;
+  }
+  
+  .mat-menu-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  /* Divider */
+  .mat-divider {
+    border-top-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  
+  /* Popup container */
+  .popup {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 260px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+  }
+  
+  /* Header */
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+  }
+  
+  /* Content */
+  .popup-content {
+    padding: 12px;
+    font-size: 14px;
+    color: #374151;
+  }
+  
+  .popup-content p {
+    margin: 8px 0;
+    cursor: pointer;
+  }
+  
+  .popup-content p:hover {
+    color: #6366f1;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  
+  /* ==============================
+     📱 Mobile
+  ================================ */
+  @media (max-width: 600px) {
+  
+    .navbar {
+      height: auto;
+      padding: 8px 12px;
+      flex-wrap: wrap;
+    }
+  
+    .navbar-left {
+      gap: 12px;
+    }
+  
+    .logo {
+      height: 2.5rem;
+    }
+  
+    /* Hide nav links on mobile */
+    .nav-links {
+      display: none;
+    }
+  
+    .navbar-right {
+      gap: 6px;
+    }
+  
+    .navbar-right button[mat-icon-button] {
+      width: 32px;
+      height: 32px;
+    }
+  
+    .navbar-right mat-icon {
+      font-size: 18px;
+    }
+  
+    /* Balance card */
+    .balance-card {
+      height: auto;
+      padding: 16px;
+    }
+  
+    .greeting {
+      font-size: 14px;
+    }
+  
+    .amount {
+      font-size: 18px;
+    }
+  
+    mat-grid-list {
+      padding: 12px;
+    }
+  }
+  
+  /* ==============================
+     📟 Tablet
+  ================================ */
+  @media (min-width: 601px) and (max-width: 1024px) {
+  
+    .navbar {
+      height: 48px;
+      padding: 0 16px;
+    }
+  
+    .logo {
+      height: 3.5rem;
+    }
+  
+    .nav-links {
+      gap: 14px;
+    }
+  
+    .nav-links li a {
+      font-size: 13px;
+    }
+  
+    .navbar-right {
+      gap: 8px;
+    }
+  
+    .balance-card {
+      height: auto;
+    }
+  
+    .amount {
+      font-size: 20px;
+    }
+  
+    mat-grid-list {
+      padding: 16px;
+    }
+  }
+  
+  /* ==============================
+     🖥 Desktop
+  ================================ */
+  @media (min-width: 1025px) {
+  
+    .navbar {
+      height: 40px;
+    }
+  
+    .logo {
+      height: 10rem;
+    }
+  
+    .nav-links {
+      display: flex;
+    }
+  
+    .balance-card {
+      height: 100px;
+    }
+  }
+  
+  
+  

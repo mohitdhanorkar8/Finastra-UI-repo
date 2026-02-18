@@ -1,0 +1,39 @@
+<!-- BALANCE CARD -->
+<div class="balance-card">
+  <div class="balance-content">
+    <h4 class="greeting">Hi Mohit,</h4>
+    <p class="subtitle">Your Consolidated Account Balance</p>
+
+    <div class="amount-row">
+      <span class="currency-pill">USD</span>
+      <span class="amount">39,234,234.00</span>
+    </div>
+  </div>
+</div>
+
+<!-- DASHBOARD GRID -->
+<mat-grid-list cols="3" rowHeight="400px">
+  <mat-grid-tile>
+    <app-quick-access></app-quick-access>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <app-limits></app-limits>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <app-accounts></app-accounts>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <app-account-balance></app-account-balance>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <app-ongoing-tasks></app-ongoing-tasks>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <app-calender></app-calender>
+  </mat-grid-tile>
+</mat-grid-list>
