@@ -35,7 +35,7 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatMenuModule,
     MatDividerModule,
-    FormsModule
+    FormsModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -59,12 +59,12 @@ export class AppComponent {
     this.showSearch = !this.showSearch;
   }
   
-  closeSearch() {
-    this.showSearch = false;
-  }
+  // closeSearch() {
+  //   this.showSearch = false;
+  // }
 
   closeAllPopups() {
-    this.showSearch = false;
+    // this.showSearch = false;
     this.showChat = false;
     this.showNotifications = false;
   }

@@ -45,7 +45,6 @@
 .nav-links li a.active {
   color: #ffffff;
   border-bottom: 2px solid #00bcd4;
-  /* Finastra-like accent */
 }
 
 /* Hover effect */
@@ -61,7 +60,6 @@
   padding: 20px 24px;
   display: flex;
   align-items: center;
-  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35); */
   color: #ffffff;
 }
 

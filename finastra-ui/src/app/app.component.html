@@ -1,27 +1,24 @@
 <nav class="navbar">
   <!-- LEFT SECTION -->
   <div class="navbar-left">
-    <img
-      src="https://images.seeklogo.com/logo-png/61/3/finastra-logo-png_seeklogo-617954.png"
-      alt="Finastra Logo"
-      class="logo"
-    />
+    <img src="https://images.seeklogo.com/logo-png/61/3/finastra-logo-png_seeklogo-617954.png" alt="Finastra Logo"
+      class="logo" />
 
     <ul class="nav-links">
       <li>
         <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
       </li>
       <li>
-        <a routerLink="/trade">Trade</a>
+        <a routerLink="/trade" routerLinkActive="active">Trade</a>
       </li>
       <li>
-        <a routerLink="/cash">Cash</a>
+        <a routerLink="/cash" routerLinkActive="active">Cash</a>
       </li>
       <li>
-        <a routerLink="/landing">Landing</a>
+        <a routerLink="/landing" routerLinkActive="active">Landing</a>
       </li>
       <li>
-        <a routerLink="/supply-chain-finance">Supply Chain Finance</a>
+        <a routerLink="/supply-chain-finance" routerLinkActive="active">Supply Chain Finance</a>
       </li>
     </ul>
   </div>
@@ -35,29 +32,20 @@
     </button> -->
 
     <!-- SEARCH -->
-<div class="search-container" [class.active]="showSearch">
-  
-  <!-- Search Icon -->
-  <button mat-icon-button (click)="toggleSearch($event)">
-    <mat-icon>search</mat-icon>
-  </button>
+    <div class="search-container" [class.active]="showSearch">
 
-  <!-- Search Input -->
-  <div
-    class="search-box"
-    *ngIf="showSearch"
-    (click)="$event.stopPropagation()"
-  >
-    <input
-      type="text"
-      placeholder="Search..."
-      [(ngModel)]="searchText"
-      (keydown.escape)="closeSearch()"
-      autofocus
-    />
-  </div>
+      <!-- Search Icon -->
+      <button mat-icon-button (click)="toggleSearch($event)">
+        <mat-icon>search</mat-icon>
+      </button>
 
-</div>
+      <!-- Search Input -->
+      <div class="search-box" *ngIf="showSearch" (click)="$event.stopPropagation()">
+        <input type="text" placeholder="Search..." [(ngModel)]="searchText" />
+      </div>
+      <!-- (keydown.escape)="closeSearch()"
+  autofocus -->
+    </div>
 
 
     <!-- Chat -->
@@ -71,11 +59,7 @@
     </button>
 
     <!-- CHAT POPUP -->
-    <div
-      class="popup"
-      *ngIf="showChat"
-      (click)="$event.stopPropagation()"
-    >
+    <div class="popup" *ngIf="showChat" (click)="$event.stopPropagation()">
       <div class="popup-header">
         <span>Chat</span>
         <button mat-icon-button (click)="closeAllPopups()">
@@ -89,11 +73,7 @@
     </div>
 
     <!-- NOTIFICATION POPUP -->
-    <div
-      class="popup"
-      *ngIf="showNotifications"
-      (click)="$event.stopPropagation()"
-    >
+    <div class="popup" *ngIf="showNotifications" (click)="$event.stopPropagation()">
       <div class="popup-header">
         <span>Notifications</span>
         <button mat-icon-button (click)="closeAllPopups()">
@@ -107,17 +87,8 @@
     </div>
 
     <!-- PROFILE MENU -->
-    <button
-      mat-icon-button
-      class="profile-btn"
-      [matMenuTriggerFor]="profileMenu"
-      (click)="closeAllPopups()"
-    >
-      <img
-        src="https://i.pravatar.cc/32"
-        alt="User"
-        class="avatar"
-      />
+    <button mat-icon-button class="profile-btn" [matMenuTriggerFor]="profileMenu" (click)="closeAllPopups()">
+      <img src="https://i.pravatar.cc/32" alt="User" class="avatar" />
       <mat-icon class="dropdown-icon">expand_more</mat-icon>
     </button>
 
