@@ -2,4 +2,107 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: #ffffff; }
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6,
+.dark-theme p,
+.dark-theme span,
+.dark-theme div,
+.dark-theme a {
+  color: #ffffff !important;
+}
+
+.dark-theme mat-card,
+.dark-theme mat-grid-tile,
+.dark-theme mat-menu,
+.dark-theme mat-toolbar {
+  color: #ffffff !important;
+}
+
+/* LIGHT THEME */
+.light-theme {
+    --bg-color: #ffffff;
+    --text-color: #111827;
+    --card-bg: #ffffff;
+  }
+  
+  /* DARK THEME */
+  .dark-theme {
+    --bg-color: #111827;
+    --text-color: #e5e7eb;
+    --card-bg: #1f2937;
+    color: #ffffff;
+  }
+  
+  /* Apply globally */
+  body {
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  /* Dashboard cards */
+  .dashboard-card {
+    background: var(--card-bg);
+  }
+
+  .dark-theme mat-card {
+    background: #1f2937 !important;
+    color: #e5e7eb !important;
+  }
+  
+  .dark-theme mat-menu-panel {
+    background: #1f2937;
+  }
+  
+  .dark-theme mat-icon {
+    color: #e5e7eb;
+  }
+  
+  .dark-theme mat-grid-tile {
+    background: #273342 !important;
+  }
+
+  .dark-theme .account-card {
+    background-color: #1f2937 !important;
+    color: #e5e7eb !important;
+  }
+  
+  .dark-theme .account-card .row {
+    border-bottom: 1px solid #374151;
+  }
+  
+  .dark-theme .account-card .title {
+    color: #f9fafb;
+  }
+  
+  .dark-theme .account-card .sub {
+    color: #9ca3af;
+  }
+  
+  .dark-theme .account-card .right {
+    color: #e5e7eb;
+  }
+
+  .dark-theme .nav-links li a {
+    color: #ffffff;
+  }
+
+  .dark-theme .card-title {
+    color: #ffffff !important;
+  }
+
+  .dark-theme .title,
+.dark-theme .subtitle,
+.dark-theme .sub,
+.dark-theme .right {
+  color: #ffffff !important;
+}
+
+.dark-theme mat-icon {
+    color: #ffffff;
+  }  

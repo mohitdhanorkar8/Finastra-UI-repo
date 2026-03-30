@@ -47,18 +47,36 @@ export class AppComponent {
   showNotifications = false;
   showSearch = false;
   searchText = '';
+  isDark = false;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
     this.router.navigate(['/dashboard']);
+
+    const theme = localStorage.getItem('theme') || 'light';
+    document.body.classList.add(theme + '-theme');
+  }
+
+  toggleTheme() {
+    this.isDark = !this.isDark;
+
+    if (this.isDark) {
+      document.body.classList.add('dark-theme');
+      document.body.classList.remove('light-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.add('light-theme');
+      document.body.classList.remove('dark-theme');
+      localStorage.setItem('theme', 'light');
+    }
   }
 
   toggleSearch(event: Event) {
     event.stopPropagation();
     this.showSearch = !this.showSearch;
   }
-  
+
   // closeSearch() {
   //   this.showSearch = false;
   // }
